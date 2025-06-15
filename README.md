@@ -18,7 +18,6 @@ color = blue
 size = 16
 weight = bold
 
-
 - Each selector ends with a colon (`:`)  
 - Properties use `=` instead of `:`  
 - `size` means `font-size` with `px` appended automatically  
