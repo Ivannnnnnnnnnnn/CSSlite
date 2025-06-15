@@ -1,0 +1,22 @@
+{
+    "name": "csslite",
+    "version": "1.0.0",
+    "description": "A simplified CSS language for easier website styling",
+    "main": "src/parser.js",
+    "scripts": {
+        "test": "jest"
+    },
+    "keywords": [
+        "css",
+        "parser",
+        "language",
+        "style",
+        "simplified",
+        "csslite"
+    ],
+    "author": "Your Name",
+    "license": "MIT",
+    "devDependencies": {
+        "jest": "^29.0.0"
+    }
+}
