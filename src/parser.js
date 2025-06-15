@@ -1,34 +1,38 @@
+const {
+    normalizeProperty,
+    appendPxIfNeeded,
+    isSelectorLine,
+    parsePropertyLine
+} = require('./utils');
+
 function parseCSSlite(input) {
     const lines = input.trim().split('\n');
     let css = '';
     let selector = '';
     let insideSelector = false;
 
-    for (let line of lines) {
-        if (!line.trim()) continue;
+    for (let rawLine of lines) {
+        const line = rawLine.trim();
+        if (!line) continue;
 
-        if (!line.startsWith(' ') && line.endsWith(':')) {
+        if (isSelectorLine(rawLine)) {
             if (insideSelector) css += '}\n';
-            selector = line.trim().slice(0, -1);
+            selector = line.slice(0, -1);
             css += `${selector} {\n`;
             insideSelector = true;
         } else if (insideSelector) {
-            const propLine = line.trim();
-            if (!propLine.includes('=')) continue;
-            let [prop, val] = propLine.split('=').map(s => s.trim());
+            const parsed = parsePropertyLine(line);
+            if (!parsed) continue;
 
-            if (prop === 'size') prop = 'font-size';
-            if (prop === 'weight') prop = 'font-weight';
-            if (prop === 'bg') prop = 'background-color';
-
-            if (['font-size', 'margin', 'padding', 'top', 'left', 'right', 'bottom'].includes(prop)) {
-                if (!val.match(/[a-z%]+$/)) val += 'px';
-            }
+            let prop = normalizeProperty(parsed.key);
+            let val = appendPxIfNeeded(prop, parsed.value);
 
             css += `  ${prop}: ${val};\n`;
         }
     }
+
     if (insideSelector) css += '}\n';
+
     return css;
 }
 
