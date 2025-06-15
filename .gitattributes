@@ -1,0 +1,13 @@
+*.cssl text
+
+*.js text
+
+*.md text
+
+*.png binary
+
+*.js text eol=lf
+*.cssl text eol=lf
+*.md text eol=lf
+
+*.png -diff
