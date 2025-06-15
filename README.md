@@ -10,6 +10,7 @@ CSSlite is a simplified CSS language designed to make styling websites easier an
 
 Write CSSlite code like this:
 
+```css
 h1:
 color = red
 size = 32
@@ -17,6 +18,7 @@ p:
 color = blue
 size = 16
 weight = bold
+```
 
 - Each selector ends with a colon (`:`)  
 - Properties use `=` instead of `:`  
