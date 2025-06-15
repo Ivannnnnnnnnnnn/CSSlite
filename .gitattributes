@@ -1,4 +1,4 @@
-*.cssl text
+*.cssl linguist-language=CSSlite
 
 *.js text
 
