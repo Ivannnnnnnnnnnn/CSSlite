@@ -1,0 +1,30 @@
+h1:
+color = darkgreen
+size = 40
+weight = bold
+
+h2:
+color = forestgreen
+size = 28
+
+p:
+color = #333333
+size = 16
+weight = normal
+margin = 10
+
+button:
+color = white
+bg = #007BFF
+padding = 12
+weight = bold
+
+.container:
+margin = 20
+padding = 15
+bg = #f0f0f0
+
+#main-title:
+color = navy
+size = 36
+weight = bold
