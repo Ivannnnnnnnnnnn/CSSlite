@@ -1,6 +1,6 @@
 # CSSlite
 
-![CSSlite Logo](assets/logo.png)
+<img src="assets/logo.png" alt="CSSlite Logo" width="120"/>
 
 CSSlite is a simplified CSS language designed to make styling websites easier and more readable.
 
