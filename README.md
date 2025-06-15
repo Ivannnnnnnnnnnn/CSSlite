@@ -1,6 +1,8 @@
 # CSSlite
 
-<img src="assets/logo.png" alt="CSSlite Logo" width="120"/>
+<p align="center">
+  <img src="assets/logo.png" alt="CSSlite Logo" width="180"/>
+</p>
 
 CSSlite is a simplified CSS language designed to make styling websites easier and more readable.
 
